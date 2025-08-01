@@ -7,7 +7,7 @@ def get_color_directory(directory, tab="    "):
     for path in sorted(directory.iterdir()):
         if path.is_dir():
             print(f"{tab}{Fore.BLUE}{path.name}/")
-            get_color_directory(path, tab="        ")
+            get_color_directory(path, tab=tab + "    ")
         else:
             print(f"{tab}{Fore.GREEN}{path.name}")
 

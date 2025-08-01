@@ -27,6 +27,11 @@ def add_contact(args, contacts):
     return "Contact added."
 
 
+def show_all_contacts(contacts):
+     for key, value in contacts.items():
+        print(key, value)
+
+
 def main():
     contacts = {}
     print("Welcome to the assistant bot!")
@@ -46,8 +51,7 @@ def main():
         elif command == "phone":
             print(phone_username(args, contacts))
         elif command == "all":
-            for key, value in contacts.items():
-                print(key, value)
+            show_all_contacts(contacts)
         else:
             print("Invalid command.")
 
