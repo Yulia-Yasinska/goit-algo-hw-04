@@ -11,5 +11,5 @@ def get_cats_info(path):
         print("Не вдалося знайти файл про котів")
         return []
     
-cats_info = get_cats_info(f"{pathlib.Path(__file__).parent}/cats_file.txt")
+cats_info = get_cats_info("second_ex/cats_file.txt")
 print(cats_info)

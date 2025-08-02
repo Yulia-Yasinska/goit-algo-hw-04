@@ -11,25 +11,28 @@ def get_color_directory(directory, tab="    "):
         else:
             print(f"{tab}{Fore.GREEN}{path.name}")
 
-
-if __name__ == "__main__":
+def main():
     if len(sys.argv) != 2:
         print(f"{Fore.RED}Вкажіть шлях до директорії як аргумент командного рядка.")
-        sys.exit(1)
+        return
 
     directory = Path(sys.argv[1])
 
     if not directory.exists():
         print(f"{Fore.RED}Шлях не існує: {directory}")
-        sys.exit(1)
+        return
 
     if not directory.is_dir():
         print(f"{Fore.RED}Це не директорія: {directory}")
-        sys.exit(1)
+        return
 
     if directory.is_file():
         print(f"{Fore.RED}Це файл, а не директорія: {directory}")
-        sys.exit(1)
+        return
 
     print(f"{Fore.BLUE}{directory.name}")
     get_color_directory(directory)
+
+
+if __name__ == "__main__":
+    main()

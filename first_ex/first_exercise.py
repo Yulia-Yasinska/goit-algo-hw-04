@@ -15,5 +15,5 @@ def total_salary(path):
         print("Не вдалося знайти файл про заробітні плати розробників")
         return (None, None)
 
-total, average = total_salary(f"{pathlib.Path(__file__).parent}/salary_file.txt")
+total, average = total_salary("first_ex/salary_file.txt")
 print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")

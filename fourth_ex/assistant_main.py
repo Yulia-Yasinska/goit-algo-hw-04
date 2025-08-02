@@ -28,9 +28,11 @@ def add_contact(args, contacts):
 
 
 def show_all_contacts(contacts):
+     result = 'All contact: \n'
      for key, value in contacts.items():
-        print(key, value)
+        result += f"{key}  {value} \n"
 
+     return result
 
 def main():
     contacts = {}
@@ -51,7 +53,7 @@ def main():
         elif command == "phone":
             print(phone_username(args, contacts))
         elif command == "all":
-            show_all_contacts(contacts)
+            print(show_all_contacts(contacts))
         else:
             print("Invalid command.")
 
